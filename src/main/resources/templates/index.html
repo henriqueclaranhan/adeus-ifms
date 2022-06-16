@@ -16,26 +16,26 @@
 	<header>
 		<a href="/">
 			<div id="adeus-ifms-logo" class="flex-row">
-				<img th:src="@{/assets/images/if.png}" alt="Logo do IFMS">
+				<img th:src="@{/assets/images/if.png}" th:alt="#{page.image.alt.if}">
 				<h1 class="green-gradient-background" th:text="#{page.header}"></h1>
 			</div>
 		</a>
 		<div id="language-selector" class="flex-row">
 			<button id="language-selector-button" class="flex-row">
-				<img class="flag" th:src="#{page.header.actuallanguage.image}" alt="Bandeira da língua escolhida">
+				<img class="flag" th:src="#{page.header.actuallanguage.image}" th:alt="#{page.image.alt.language}">
 				<p th:text="#{page.header.actuallanguage}"></p>
 				<img id="chevron-down" th:src="@{/assets/icons/chevron-down.svg}">
 			</button>
 			<ul id="menu-options">
 				<a href="/?locale=pt_BR">
 					<li>
-						<img class="flag" th:src="@{/assets/images/brasil.png}" alt="Bandeira do Brasil">
+						<img class="flag" th:src="@{/assets/images/brasil.png}" th:alt="#{page.image.alt.pt}">
 						<p th:text="#{page.header.language.pt}"></p>
 					</li>
 				</a>
 				<a href="/?locale=en_US">
 					<li>
-						<img class="flag" th:src="@{/assets/images/united-kingdom.png}" alt="Bandeira do Reino Unido">
+						<img class="flag" th:src="@{/assets/images/united-kingdom.png}" alt="#{page.image.alt.en}">
 						<p th:text="#{page.header.language.en}"></p>
 					</li>
 				</a>
