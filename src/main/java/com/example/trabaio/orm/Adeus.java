@@ -20,7 +20,7 @@ public class Adeus {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	// fazer o id uid?
+
 
 	public Adeus() {}
 	
