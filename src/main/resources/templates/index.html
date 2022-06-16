@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html th:lang="#{page.lang}" xmlns:th="https://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="assets/images/if.png" type="image/x-icon">
-	<link rel="stylesheet" href="style.css">
-	<title>Adeus IFMS</title>
+	<link rel="shortcut icon" th:href="@{/assets/images/if.png}" type="image/x-icon">
+	<link rel="stylesheet" th:href="@{/style.css}">
+	<title th:text="#{page.title}"></title>
 </head>
 
 <body class="flex-column ">
@@ -15,24 +16,29 @@
 	<header>
 		<a href="/">
 			<div id="adeus-ifms-logo" class="flex-row">
-				<img src="assets/images/if.png" alt="Logo do IFMS">
-				<h1 class="green-gradient-background">Adeus IFMS</h1>
+				<img th:src="@{/assets/images/if.png}" alt="Logo do IFMS">
+				<h1 class="green-gradient-background" th:text="#{page.header}"></h1>
 			</div>
 		</a>
 		<div id="language-selector" class="flex-row">
 			<button id="language-selector-button" class="flex-row">
-				<img class="flag" src="assets/images/brasil.png" alt="Bandeira da língua escolhida">
-				<p>Português</p>
-				<img id="chevron-down" src="assets/icons/chevron-down.svg">
+				<img class="flag" th:src="#{page.header.actuallanguage.image}" alt="Bandeira da língua escolhida">
+				<p th:text="#{page.header.actuallanguage}"></p>
+				<img id="chevron-down" th:src="@{/assets/icons/chevron-down.svg}">
 			</button>
 			<ul id="menu-options">
 				<li>
-					<img class="flag" src="assets/images/brasil.png" alt="Bandeira do Brasil">
-					<p>Português</p>
+					<a href="/?locale=pt_BR">
+						<img class="flag" th:src="@{/assets/images/brasil.png}" alt="Bandeira do Brasil">
+						<p th:text="#{page.header.language.pt}"></p>
+					</a>
+					
 				</li>
 				<li>
-					<img class="flag" src="assets/images/united-kingdom.png" alt="Bandeira do Reino Unido">
-					<p>Inglês</p>
+					<a href="/?locale=en_US">
+						<img class="flag" th:src="@{/assets/images/united-kingdom.png}" alt="Bandeira do Reino Unido">
+						<p th:text="#{page.header.language.en}"></p>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -40,13 +46,13 @@
 	<content>
 		<span class="flex-column">
 			<p>0</p>
-			<h2>pessoas já disseram adeus ao IFMS</h2>
+			<h2 th:text="#{page.content.h2}" ></h2>
 		</span>
 		<br>
-		<p>Diga adeus ao IFMS e faça parte dessa história você também!</p>
+		<p th:text="#{page.content.p}" ></p>
 	</content>
 	<button id="say-goodbye-button" class="green-gradient-background">
-		<p>DIZER ADEUS AO IFMS</p>
+		<p th:text="#{page.content.button}" ></p>
 	</button>
 </body>
 
