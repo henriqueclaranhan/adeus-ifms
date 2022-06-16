@@ -114,7 +114,7 @@ header {
 	animation: slidein .3s ease;
 }
 
-#menu-options li {
+#menu-options li a {
 	display: flex;
 	align-items: center;
 	list-style: none;
@@ -126,7 +126,7 @@ header {
 	background-color: #bef1d1;
 }
 
-#menu-options li p {
+#menu-options li a p {
 	margin: 0 6px;
 }
 
