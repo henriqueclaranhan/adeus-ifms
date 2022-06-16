@@ -1,27 +1,27 @@
 @font-face {
 	font-family: "Lato";
-	src: url("assets/fonts/Lato-Regular.ttf") format("truetype");
+	src: url("../assets/fonts/Lato-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Lato";
-	src: url("assets/fonts/Lato-Bold.ttf") format("truetype");
+	src: url("../assets/fonts/Lato-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Poppins";
-	src: url("assets/fonts/Poppins-Regular.ttf") format("truetype");
+	src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Poppins";
-	src: url("assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+	src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
