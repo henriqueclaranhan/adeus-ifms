@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/images/if.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<title>Adeus IFMS</title>
+</head>
+
+<body class="flex-column ">
+	<div id="background-click-container"></div>
+	<header>
+		<a href="/">
+			<div id="adeus-ifms-logo" class="flex-row">
+				<img src="assets/images/if.png" alt="Logo do IFMS">
+				<h1 class="green-gradient-background">Adeus IFMS</h1>
+			</div>
+		</a>
+		<div id="language-selector" class="flex-row">
+			<button id="language-selector-button" class="flex-row">
+				<img class="flag" src="assets/images/brasil.png" alt="Bandeira da língua escolhida">
+				<p>Português</p>
+				<img id="chevron-down" src="assets/icons/chevron-down.svg">
+			</button>
+			<ul id="menu-options">
+				<li>
+					<img class="flag" src="assets/images/brasil.png" alt="Bandeira do Brasil">
+					<p>Português</p>
+				</li>
+				<li>
+					<img class="flag" src="assets/images/united-kingdom.png" alt="Bandeira do Reino Unido">
+					<p>Inglês</p>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<content>
+		<span class="flex-column">
+			<p>0</p>
+			<h2>pessoas já disseram adeus ao IFMS</h2>
+		</span>
+		<br>
+		<p>Diga adeus ao IFMS e faça parte dessa história você também!</p>
+	</content>
+	<button id="say-goodbye-button" class="green-gradient-background">
+		<p>DIZER ADEUS AO IFMS</p>
+	</button>
+</body>
+
+<script>
+	let languageSelectorButton = document.querySelector("#language-selector-button");
+	let menuOptions = document.querySelector("#menu-options");
+	let backgroundClickContainer = document.querySelector("#background-click-container");
+
+	const showLanguagesMenu = () => {
+		backgroundClickContainer.style = "z-index: 1; display: block;";
+		menuOptions.style = "z-index: 2; display: block;";
+	}
+
+	const hideLanguagesMenu = () => {
+		backgroundClickContainer.style = "z-index: -1; display: none;";
+		menuOptions.style = "z-index: -1; display: none;";
+	}
+
+	languageSelectorButton.addEventListener("click", showLanguagesMenu, false);
+
+	backgroundClickContainer.addEventListener("click", hideLanguagesMenu, false);
+</script>
+
+</html>
