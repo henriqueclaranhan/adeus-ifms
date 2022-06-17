@@ -150,8 +150,8 @@ header {
 
 content {
 	margin-top: auto;
-	margin-bottom: 50px;
-	padding: 0 2.4rem;
+	margin-bottom: auto;
+	padding: 0 2.4rem 2rem 2.4rem;
 }
 
 span {
