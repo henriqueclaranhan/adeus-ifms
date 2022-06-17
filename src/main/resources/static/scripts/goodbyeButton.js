@@ -10,5 +10,6 @@ if (userSaidGoodbye != null) {
 }
 
 sayGoodByeButton.addEventListener("click", () => {
+	sayGoodByeButton.style.display = "none";
 	localStorage.setItem("userSaidGoodbye", "yes");
 }, false);
