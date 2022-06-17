@@ -14,7 +14,6 @@ import com.example.trabaio.repository.AdeusRepository;
 import com.example.trabaio.orm.Adeus;
 
 @Controller
-@RequestMapping("/usuario")
 public class IndexController {
 	
 	// @Autowired
