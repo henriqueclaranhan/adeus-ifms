@@ -28,7 +28,7 @@ public class ConfigInter implements WebMvcConfigurer {
 	@Bean
 	public LocaleResolver  localeResolver() {
 		CookieLocaleResolver  clr = new CookieLocaleResolver(); 
-		clr.setDefaultLocale(Locale.ENGLISH);
+		clr.setDefaultLocale(new Locale("pt", "BR"));
 		return clr;
 	}
 
