@@ -17,7 +17,7 @@
 		<a href="/">
 			<div id="adeus-ifms-logo" class="flex-row">
 				<img th:src="@{/assets/images/if.png}" th:alt="#{page.image.alt.if}">
-				<h1 class="green-gradient-background" th:text="#{page.header}"></h1>
+				<h1 class="green-gradient-background" th:classappend="${#messages.msg('page.lang') == 'en-US'} ? english-title" th:text="#{page.header}"></h1>
 			</div>
 		</a>
 		<div id="language-selector" class="flex-row">
