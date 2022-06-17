@@ -59,24 +59,6 @@
 	<data th:if="${idAdeus}" th:text="${idAdeus}" hidden></data>
 </body>
 
-<script>
-	let languageSelectorButton = document.querySelector("#language-selector-button");
-	let menuOptions = document.querySelector("#menu-options");
-	let backgroundClickContainer = document.querySelector("#background-click-container");
-
-	const showLanguagesMenu = () => {
-		backgroundClickContainer.style = "z-index: 1; display: block;";
-		menuOptions.style = "z-index: 2; display: block;";
-	}
-
-	const hideLanguagesMenu = () => {
-		backgroundClickContainer.style = "z-index: -1; display: none;";
-		menuOptions.style = "z-index: -1; display: none;";
-	}
-
-	languageSelectorButton.addEventListener("click", showLanguagesMenu, false);
-
-	backgroundClickContainer.addEventListener("click", hideLanguagesMenu, false);
-</script>
+<script type="text/javascript" th:src="@{/scripts/handleLanguagesMenuView.js}"></script>
 
 </html>
