@@ -11,16 +11,13 @@ import com.example.trabaio.orm.Adeus;
 
 @Controller
 public class IndexController {
-	
-	// @Autowired
-	// private MessageSource message; // internacionalização
 
 	@Autowired
 	private AdeusRepository adeusRepository;
-	
+
 	@GetMapping("/")
-	public String index(Model model /*, Locale locale*/) {
-		model.addAttribute("countAdeus", String.valueOf(adeusRepository.count()));
+	public String index(Model model) {
+		model.addAttribute("countAdeus", adeusRepository.count());
 		return "index";
 	}
 
