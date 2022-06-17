@@ -15,26 +15,27 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 @Configuration
 public class ConfigInter implements WebMvcConfigurer {
 	@Bean
-    public MessageSource messageSource() { 
-        ReloadableResourceBundleMessageSource messageSource = 
-			new ReloadableResourceBundleMessageSource(); 
-        messageSource.setBasename("classpath:data"); 
-        messageSource.setDefaultEncoding("UTF-8"); 
-        return messageSource;
-    }
+	public MessageSource messageSource() { 
+		ReloadableResourceBundleMessageSource messageSource = 
+			new ReloadableResourceBundleMessageSource();
 
-    @Bean
-    public LocaleResolver  localeResolver() { 
-    	CookieLocaleResolver  clr = new CookieLocaleResolver(); 
-        clr.setDefaultLocale(Locale.ENGLISH); 
-        return clr;
+		messageSource.setBasename("classpath:/messages/data");
+		messageSource.setDefaultEncoding("UTF-8");
+
+		return messageSource;
 	}
 
+	@Bean
+	public LocaleResolver  localeResolver() {
+		CookieLocaleResolver  clr = new CookieLocaleResolver(); 
+		clr.setDefaultLocale(Locale.ENGLISH);
+		return clr;
+	}
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor(); 
-        interceptor.setParamName("locale"); 
-        registry.addInterceptor(interceptor); 
-    }
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor(); 
+		interceptor.setParamName("locale");
+		registry.addInterceptor(interceptor);
+	}
 }

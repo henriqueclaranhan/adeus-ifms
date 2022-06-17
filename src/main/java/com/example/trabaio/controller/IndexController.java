@@ -20,10 +20,6 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String index(Model model /*, Locale locale*/) {
-
-		// internacionalização
-		// String msn = message.getMessage("index.welcome", null, locale);
-		// model.addAttribute("msnBemVindo", msn);
 		model.addAttribute("countAdeus", String.valueOf(adeusRepository.count()));
 		return "index";
 	}

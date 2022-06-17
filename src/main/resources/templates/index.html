@@ -45,12 +45,12 @@
 	<content>
 		<span class="flex-column">
 			<p th:text="${countAdeus}"></p>
-			<h2 th:text="#{page.content.h2}" ></h2>
+			<h2 th:if="${countAdeus == '1'}" th:text="#{page.content.h2}"></h2>
+			<h2 th:unless="${countAdeus == '1'}" th:text="#{page.content.h2.plural}"></h2>
 		</span>
 		<br>
 		<p th:text="#{page.content.p}" ></p>
 	</content>
-	<!-- Cria um form ou faz algo pra interagir com o post no back -->
 	<form action="/adeus" method="post">
 		<button id="say-goodbye-button" class="green-gradient-background">
 			<p th:text="#{page.content.button}" ></p>
