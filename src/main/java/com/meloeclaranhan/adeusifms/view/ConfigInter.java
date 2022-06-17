@@ -1,4 +1,4 @@
-package com.example.trabaio.view;
+package com.meloeclaranhan.adeusifms.view;
 
 import java.util.Locale;
 

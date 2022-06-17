@@ -1,4 +1,4 @@
-package com.example.trabaio.orm;
+package com.meloeclaranhan.adeusifms.orm;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
