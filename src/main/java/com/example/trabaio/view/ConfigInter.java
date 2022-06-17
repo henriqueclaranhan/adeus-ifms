@@ -19,6 +19,7 @@ public class ConfigInter implements WebMvcConfigurer {
         ReloadableResourceBundleMessageSource messageSource = 
 			new ReloadableResourceBundleMessageSource(); 
         messageSource.setBasename("classpath:data"); 
+        messageSource.setDefaultEncoding("UTF-8"); 
         return messageSource;
     }
 
