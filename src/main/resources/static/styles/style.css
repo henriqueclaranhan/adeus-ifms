@@ -138,6 +138,7 @@ header {
 
 #adeus-ifms-logo h1 {
 	font-size: 2.2rem;
+	line-height: 2rem;
 	text-shadow: 1px 1px 8px #709a7d30;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -146,7 +147,6 @@ header {
 
 #adeus-ifms-logo h1.english-title {
 	font-size: 2rem;
-	line-height: 2rem;
 	padding-right: 10px;
 }
 
