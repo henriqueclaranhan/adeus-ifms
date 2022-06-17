@@ -51,9 +51,11 @@
 		<p th:text="#{page.content.p}" ></p>
 	</content>
 	<!-- Cria um form ou faz algo pra interagir com o post no back -->
-	<button id="say-goodbye-button" class="green-gradient-background">
-		<p th:text="#{page.content.button}" ></p>
-	</button>
+	<form action="/adeus" method="post">
+		<button id="say-goodbye-button" class="green-gradient-background">
+			<p th:text="#{page.content.button}" ></p>
+		</button>
+	</form>
 	<data th:if="${idAdeus}" th:text="${idAdeus}" hidden></data>
 </body>
 
